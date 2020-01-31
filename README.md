@@ -19,12 +19,12 @@ An easy and elegant app made with Vue to learn new languages with a minimal effo
 
 At the first hand a few apps have a fixed numbers of flash cards to create besides offering deals to spent money to create more flascards, thus this mean a extra spent in your budget. this services also have an outdated design and the user see an overwhelming interface seeking the desired options.
 
-In the other you might think you can solve this troubles using a desktop app but most of them are outdated or require install third party libraries or virtual machines to run it with a cost of performance and disk space.  
+In the other you might think you can solve this troubles using a desktop app but most of them are outdated or require install third party libraries or virtual machines to run it with a cost of performance and disk space.
 
 Finally these apps works online, this mean if you lost your internet conection you would lost your progress and couldn't continue studying. cause that this application aims to fix all this issues and use the tool which provides the last browser technologies with a cutting edge app without connectivity, performace and design problems.
 
 ---
-### Technologies 
+### Technologies
 
 * Vue
 * Vue router
@@ -32,7 +32,7 @@ Finally these apps works online, this mean if you lost your internet conection y
 * Axios
 * Pouch DB
 ---
-### Setup 
+### Setup
 
 ```
 TODO
