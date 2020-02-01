@@ -10,7 +10,7 @@ An easy and elegant app made with Vue to learn new languages with a minimal effo
 
 ## Table of content
 * [General info](#general-information)
-* [Technologies](#general-information)
+* [Technologies](#technologies)
 * [Setup](#setup)
 ---
 ### General information
