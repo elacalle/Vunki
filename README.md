@@ -26,11 +26,13 @@ Finally, these apps work online, this means if you lost your internet connection
 ---
 ### Technologies
 
+* Axios
+* Buetify
+* Pouch DB
 * Vue
 * Vue router
 * Vue i18n
-* Axios
-* Pouch DB
+
 ---
 ### Setup
 
