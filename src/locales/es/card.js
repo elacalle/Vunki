@@ -4,7 +4,7 @@ export default {
   errors: {
     word:{
       required: 'Es obligatorio escribir una palabra',
-      minLength: 'La longuitud minima es 1 char'
+      minLength: 'La longuitud minima es {1} char'
     },
     meaning:{
       required: 'Es obligatorio escribir un significado'
