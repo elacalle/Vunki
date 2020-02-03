@@ -26,10 +26,10 @@ Finally, these apps work online, this means if you lost your internet connection
 ---
 ### Technologies
 
-* Axios
 * Buetify
-* Pouch DB
+* Dexie
 * Vue
+* Vuelidate
 * Vue router
 * Vue i18n
 

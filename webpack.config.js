@@ -9,6 +9,7 @@ module.exports = {
     },
     module: {
       rules: [
+        {test: /\.css$/, use: ['style-loader', 'css-loader']},
         {test: /\.html$/, use: 'html-loader'}
       ]
     },
@@ -19,14 +20,14 @@ module.exports = {
         }),
         new webpack.ProvidePlugin({
           Vue: ['vue/dist/vue.esm.js', 'default'],
-          PouchDB: ['pouchdb', 'default'],
+          Dexie: ['dexie', 'default'],
           Database: ['db', 'default']
         }),
         new CleanWebpackPlugin()
     ],
     resolve: {
       alias: {
-        db: path.resolve(__dirname, './src/services/pouch/config.js')
+        db: path.resolve(__dirname, './src/services/database/config.js')
     }
   }
 }
