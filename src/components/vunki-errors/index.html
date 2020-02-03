@@ -1,0 +1,9 @@
+<div>
+  <b-message v-if="errors.$error" type="is-danger">
+    <ul v-for="normalizedError in normalizedErrors">
+      <li>
+        {{ $t(`card.errors.${normalizedError.property}.${normalizedError.validation}`, Object.values(normalizedError.params)) }}
+      </li>
+    </ul>
+  </b-message>
+</div>
