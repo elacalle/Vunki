@@ -30,6 +30,7 @@
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.4.2",
+    "file-loader": "^5.0.2",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "install": "^0.13.0",
@@ -39,6 +40,7 @@
     "webpack-dev-server": "^3.10.2"
   },
   "dependencies": {
+    "@mdi/font": "^4.9.95",
     "buefy": "^0.8.10",
     "dexie": "^2.0.4",
     "vue": "^2.6.11",

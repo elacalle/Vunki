@@ -10,6 +10,7 @@ module.exports = {
   },
   module: {
     rules: [
+      { test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/, loader: "file-loader" },
       { test: /\.css$/, use: [MiniCssExtractPlugin.loader, "css-loader"] },
       { test: /\.html$/, use: "html-loader" }
     ]

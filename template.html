@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Vunki</title>
   </head>
   <body>
-    <div id="app">
-      <router-view></router-view>
+    <div class="section" id="app">
+      <div class="columns">
+        <div class="column isfull">
+          <vunki-nav />
+        </div>
+      </div>
+      <div class="container is-fluid">
+        <router-view></router-view>
+      </div>
     </div>
   </body>
 </html>

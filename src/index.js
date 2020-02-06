@@ -4,6 +4,8 @@ import VueI18n from 'vue-i18n';
 import router from './routes';
 import messages from './locales'
 import Buefy from 'buefy';
+import VunkiNav from './components/vunki-navbar'
+import '@mdi/font/css/materialdesignicons.css';
 import 'buefy/dist/buefy.css';
 import './styles/main.css';
 
@@ -19,6 +21,7 @@ let i18n = new VueI18n({
 
 new Vue({
     el: '#app',
+    components: {VunkiNav},
     i18n,
     router
 });
