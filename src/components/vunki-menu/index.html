@@ -1,0 +1,18 @@
+<div>
+  <b-menu>
+    <b-menu-list label="Menu">
+      <!--           <b-menu-item icon="information-outline" label="Home"></b-menu-item> -->
+      <b-menu-item icon="card-text-outline">
+        <template slot="label" slot-scope="props">
+          Cards
+          <b-icon
+            class="is-pulled-right"
+            :icon="props.expanded ? 'menu-down' : 'menu-up'"
+          >
+          </b-icon>
+        </template>
+        <b-menu-item icon="plus-box-outline" label="New"></b-menu-item>
+      </b-menu-item>
+    </b-menu-list>
+  </b-menu>
+</div>
