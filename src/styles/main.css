@@ -1,0 +1,3 @@
+.vunki_errors li:first-letter {
+  text-transform: capitalize;
+}

@@ -5,6 +5,7 @@ import router from './routes';
 import messages from './locales'
 import Buefy from 'buefy';
 import 'buefy/dist/buefy.css';
+import './styles/main.css';
 
 Vue.use(VueRouter);
 Vue.use(Vuelidate);

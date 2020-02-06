@@ -23,7 +23,7 @@ export default new VueRouter({
           component: NewCard
         },
         {
-          path: 'edit',
+          path: ':id/edit',
           name: 'edit-card',
           component: EditCard 
         }

@@ -8,15 +8,10 @@ export default Vue.extend({
   components: {
     VunkiErrors
   },
-  data: () => {
-    return {
-      card: {
-        word: '',
-        meaning: '',
-        difficulty: 0,
-        deck: 0
-      }
-    };
+  props: {
+    card: {
+      type: Object
+    }
   },
   validations: {
     card: {
