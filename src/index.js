@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import VueRouter from 'vue-router'
 import Vuelidate from 'vuelidate'
 import VueI18n from 'vue-i18n'
