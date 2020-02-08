@@ -1,5 +1,5 @@
-import template from "./index.html";
-import sharedView from "../shared";
+import template from './index.html'
+import sharedView from '../shared'
 
 export default Vue.extend({
   template,
@@ -7,16 +7,16 @@ export default Vue.extend({
   data: () => {
     return {
       card: {
-        word: "",
-        meaning: "",
+        word: '',
+        meaning: '',
         difficulty: 0,
         deck: 0
       }
-    };
+    }
   },
-  created() {
-    this.$on("save", function(e) {
-      Database.cards.put(e);
-    });
+  created () {
+    this.$on('save', function (e) {
+      Database.cards.put(e)
+    })
   }
-});
+})

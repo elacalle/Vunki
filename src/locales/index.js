@@ -5,4 +5,4 @@ export default {
   locale: 'en',
   en,
   es
-};
+}

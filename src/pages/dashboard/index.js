@@ -3,10 +3,10 @@ import VunkiMenu from '../../components/vunki-menu'
 
 export default Vue.extend({
   template,
-  components: {VunkiMenu},
+  components: { VunkiMenu },
   methods: {
     createCard: function () {
-      this.$router.push({path: '/card/new'})
+      this.$router.push({ path: '/card/new' })
     }
   }
 })

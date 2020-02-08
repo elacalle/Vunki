@@ -1,12 +1,12 @@
 export default {
   word: 'palabra',
-  meaning: 'significado', 
+  meaning: 'significado',
   errors: {
-    word:{
+    word: {
       required: 'Es obligatorio escribir una palabra',
       minLength: 'La longuitud minima es {1} char'
     },
-    meaning:{
+    meaning: {
       required: 'Es obligatorio escribir un significado'
     }
   }

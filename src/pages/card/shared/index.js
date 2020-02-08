@@ -1,7 +1,7 @@
-import template from "./index.html";
+import template from './index.html'
 import VunkiErrors from '../../../components/vunki-errors'
 
-import {required, minLength} from "vuelidate/lib/validators";
+import { required, minLength } from 'vuelidate/lib/validators'
 
 export default Vue.extend({
   template,
@@ -25,27 +25,27 @@ export default Vue.extend({
     }
   },
   computed: {
-    valid: function() {
-      return !this.$v.$error;
+    valid: function () {
+      return !this.$v.$error
     }
   },
   methods: {
-    save: function() {
-      this.$v.$touch();
+    save: function () {
+      this.$v.$touch()
 
       if (this.valid) {
-        this.$parent.$emit("save", this.card);
-        this.clearFields();
+        this.$parent.$emit('save', this.card)
+        this.clearFields()
       }
     },
-    clearFields() {
-      this.card = { word: null, meaning: null, difficulty: 0, deck: 0 };
-      this.$v.$reset();
+    clearFields () {
+      this.card = { word: null, meaning: null, difficulty: 0, deck: 0 }
+      this.$v.$reset()
     },
-    back: function() {
+    back: function () {
       this.$router.push({
-        path: "/"
-      });
+        path: '/'
+      })
     }
   }
-});
+})

@@ -1,4 +1,4 @@
-import template from './index.html';
+import template from './index.html'
 
 export default Vue.extend({
   template

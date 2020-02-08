@@ -1,21 +1,21 @@
-import VueRouter from 'vue-router';
+import VueRouter from 'vue-router'
 
-import RouteView from './components/route-view'
 import Dashboard from './pages/dashboard'
-import NewCard from './pages/card/new';
-import EditCard from './pages/card/edit';
+import ListCard from './pages/card'
+import NewCard from './pages/card/new'
+import EditCard from './pages/card/edit'
 
 export default new VueRouter({
   routes: [
     {
       path: '/',
       name: 'dashboard',
-      component: Dashboard,
+      component: Dashboard
     },
     {
       path: '/card',
       name: 'card',
-      component: RouteView,
+      component: ListCard,
       children: [
         {
           path: 'new',
@@ -25,10 +25,9 @@ export default new VueRouter({
         {
           path: ':id/edit',
           name: 'edit-card',
-          component: EditCard 
+          component: EditCard
         }
       ]
     }
   ]
 })
-  

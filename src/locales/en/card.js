@@ -1,12 +1,12 @@
 export default {
   word: 'word',
-  meaning: 'meaning', 
+  meaning: 'meaning',
   errors: {
-    word:{
+    word: {
       required: 'you must write a word',
       minLength: 'The minimum length is {1} char'
     },
-    meaning:{
+    meaning: {
       required: 'you must write a meaning'
     }
   }
