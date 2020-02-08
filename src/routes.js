@@ -1,11 +1,9 @@
-import VueRouter from 'vue-router'
-
 import Dashboard from './pages/dashboard'
 import ListCard from './pages/card'
 import NewCard from './pages/card/new'
 import EditCard from './pages/card/edit'
 
-export default new VueRouter({
+export default {
   routes: [
     {
       path: '/',
@@ -30,4 +28,4 @@ export default new VueRouter({
       ]
     }
   ]
-})
+}

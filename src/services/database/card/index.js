@@ -3,7 +3,7 @@ const Cards = Database.cards
 export default {
   methods: {
     save: async function save (obj) {
-      await Cards.put(obj)
+      return Cards.put(obj)
         .then(response => {
           return response
         })
@@ -13,13 +13,11 @@ export default {
     },
 
     update: async function update (id, obj) {
-      await Cards.update(id, obj)
+      return Cards.update(id, obj)
     },
 
     get: async function get (id) {
-      await Cards.get(parseInt(id), res => {
-        return res
-      })
+      return Cards.get(parseInt(id))
     }
   }
 }
