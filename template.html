@@ -6,13 +6,8 @@
   </head>
   <body>
     <div class="section" id="app">
-      <div class="columns">
-        <div class="column isfull">
-          <vunki-nav />
-        </div>
-      </div>
       <div class="container is-fluid">
-        <component :is="currentComponent"/>
+        <component :is="currentComponent || dashboard"/>
       </div>
     </div>
   </body>

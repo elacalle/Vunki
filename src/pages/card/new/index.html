@@ -1,9 +1,7 @@
 <div>
-  <h1 class="title">
-    Create card
-  </h1>
-
   <section>
-    <shared-view :card="card" />
+    <shared-view :card="card">
+      {{ $t('card.title.new') }}
+    </shared-view>
   </section>
 </div>

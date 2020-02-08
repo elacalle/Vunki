@@ -4,7 +4,6 @@ import VueI18n from 'vue-i18n'
 import routerPaths from './routes'
 import messages from './locales'
 import Buefy from 'buefy'
-import VunkiNav from './components/vunki-navbar'
 import '@mdi/font/css/materialdesignicons.css'
 import 'buefy/dist/buefy.css'
 import './styles/main.css'
@@ -24,16 +23,16 @@ const i18n = new VueI18n({
 // eslint-disable-next-line no-new
 new Vue({
   el: '#app',
-  components: { VunkiNav },
   i18n,
   router,
   computed: {
+    dashboard () {
+      return routerPaths.routes[0].component
+    },
     currentComponent: function () {
-      var dashboard = routerPaths.routes[0].component
       var foundRoute = this.$route.matched.find(component => { return component.name === this.$route.name })
 
-      if (foundRoute) return foundRoute.components.default
-      return dashboard
+      return foundRoute ? foundRoute.components.default : null
     }
   }
 })

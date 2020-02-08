@@ -18,6 +18,14 @@ export default {
 
     get: async function get (id) {
       return Cards.get(parseInt(id))
+    },
+
+    delete: async function (id) {
+      return Cards.delete(parseInt(id))
+    },
+
+    all: async function all () {
+      return Cards.toArray()
     }
   }
 }

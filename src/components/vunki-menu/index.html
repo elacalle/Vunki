@@ -1,9 +1,13 @@
 <div>
   <b-menu>
     <b-menu-list label="Menu">
-      <!--           <b-menu-item icon="information-outline" label="Home"></b-menu-item> -->
-      <b-menu-item icon="card-text-outline">
-        <template slot="label" slot-scope="props">
+      <b-menu-item
+        :active="false"
+        :expanded="isActive"
+        @click="isActive = !isActive"
+        icon="card-text-outline"
+      >
+        <template slot="label" :active="false" slot-scope="props">
           Cards
           <b-icon
             class="is-pulled-right"
@@ -11,7 +15,18 @@
           >
           </b-icon>
         </template>
-        <b-menu-item icon="plus-box-outline" label="New"></b-menu-item>
+        <b-menu-item
+          icon="format-list-bulleted"
+          tag="router-link"
+          to="/card"
+          label="List"
+        />
+        <b-menu-item
+          icon="plus-box-outline"
+          tag="router-link"
+          to="/card/new"
+          label="Add"
+        />
       </b-menu-item>
     </b-menu-list>
   </b-menu>

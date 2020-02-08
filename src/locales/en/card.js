@@ -1,6 +1,17 @@
 export default {
   word: 'word',
   meaning: 'meaning',
+  title: {
+    new: 'New flashcard',
+    edit: 'Edit flashcard'
+  },
+  button: {
+    edit: 'Edit',
+    delete: 'Delete'
+  },
+  form: {
+    success: 'Flashcard saved sucessfully'
+  },
   errors: {
     word: {
       required: 'you must write a word',

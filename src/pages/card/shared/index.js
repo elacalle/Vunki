@@ -35,6 +35,7 @@ export default Vue.extend({
 
       if (this.valid) {
         this.$parent.$emit('save', this.card)
+        this.success()
         this.clearFields()
       }
     },
@@ -43,8 +44,12 @@ export default Vue.extend({
       this.$v.$reset()
     },
     back: function () {
-      this.$router.push({
-        path: '/'
+      this.$router.go(-1)
+    },
+    success () {
+      this.$buefy.toast.open({
+        message: this.$t('card.form.success'),
+        type: 'is-success'
       })
     }
   }
