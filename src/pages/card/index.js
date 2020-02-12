@@ -1,5 +1,5 @@
 import template from './index.html'
-import cardMixin from '../../services/database/card'
+import cardMixin from '../../mixins/card'
 
 export default Vue.extend({
   template,
@@ -14,7 +14,7 @@ export default Vue.extend({
       this.cardList = await this.all()
     },
     deleteCard: function (id) {
-      this.delete(id)
+      this.remove(id)
       this.success()
       this.loadCards()
     },

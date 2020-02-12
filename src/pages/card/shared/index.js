@@ -1,7 +1,7 @@
 import template from './index.html'
 import VunkiErrors from '../../../components/vunki-errors'
 
-import { required, minLength } from 'vuelidate/lib/validators'
+import { required } from 'vuelidate/lib/validators'
 
 export default Vue.extend({
   template,
@@ -16,8 +16,7 @@ export default Vue.extend({
   validations: {
     card: {
       word: {
-        required,
-        minLength: minLength(5)
+        required
       },
       meaning: {
         required

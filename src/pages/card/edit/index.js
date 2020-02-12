@@ -1,6 +1,6 @@
 import template from './index.html'
 import sharedView from '../shared'
-import cardMixin from '../../../services/database/card'
+import cardMixin from '../../../mixins/card'
 
 export default Vue.extend({
   template,

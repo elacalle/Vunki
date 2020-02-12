@@ -6,16 +6,16 @@
     </h1>
     <div>
       <b-field :type="{'is-danger': $v.card.word.$error}" label="Word">
-        <b-input v-model="card.word" input="setName"></b-input>
+        <b-input v-model="card.word" name="word"></b-input>
       </b-field>
       <b-field :type="{'is-danger': $v.card.meaning.$error}" label="Meaning">
-        <b-input v-model="card.meaning"></b-input>
+        <b-input v-model="card.meaning" name="meaning"></b-input>
       </b-field>
 
       <vunki-errors :errors="$v.card" />
       <br />
-      <b-button type="is-primary" @click="save">Save</b-button>
-      <b-button type="is-text" @click="back">Back</b-button>
+      <b-button type="is-primary" class="save" @click="save">Save</b-button>
+      <b-button type="is-text" class="back" @click="back">Back</b-button>
     </div>
   </div>
   <div class="column is-2"></div>

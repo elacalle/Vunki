@@ -4,7 +4,7 @@ import VunkiNav from '../../components/vunki-navbar'
 
 export default Vue.extend({
   template,
-  components: { VunkiMenu , VunkiNav},
+  components: { VunkiMenu, VunkiNav },
   methods: {
     createCard: function () {
       this.$router.push({ path: '/card/new' })
