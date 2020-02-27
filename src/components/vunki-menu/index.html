@@ -1,20 +1,6 @@
 <div>
   <b-menu>
-    <b-menu-list label="Menu">
-      <b-menu-item
-        :active="false"
-        :expanded="isActive"
-        @click="isActive = !isActive"
-        icon="card-text-outline"
-      >
-        <template slot="label" :active="false" slot-scope="props">
-          Cards
-          <b-icon
-            class="is-pulled-right"
-            :icon="props.expanded ? 'menu-down' : 'menu-up'"
-          >
-          </b-icon>
-        </template>
+    <b-menu-list label="Cards">
         <b-menu-item
           icon="format-list-bulleted"
           tag="router-link"
@@ -27,7 +13,6 @@
           to="/card/new"
           label="Add"
         />
-      </b-menu-item>
     </b-menu-list>
   </b-menu>
 </div>

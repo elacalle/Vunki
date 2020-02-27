@@ -23,3 +23,13 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+var db = require('../../../src/services/database/config')
+
+Cypress.Commands.add('removeTable', () => {
+  db.cards.clear()
+})
+
+Cypress.Commands.add('createResource', async function (tableName, object) {
+  await db[tableName].put(object)
+})

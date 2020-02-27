@@ -1,38 +1,70 @@
-<div class="columns">
-  <div class="column is-2"></div>
-  <div class="column is-8">
-    <h1 class="title">
-      Flashcard list
-    </h1>
-    <b-table :data="cardList">
-      <template slot-scope="props">
-        <b-table-column field="ID" width="20" label="id" numeric centered>
-          {{ props.row.id }}
-        </b-table-column>
-        <b-table-column field="word" width="40" label="Word" numeric centered>
-          {{ props.row.word}}
-        </b-table-column>
-        <b-table-column
-          field="meaning"
-          width="40"
-          label="Meaning"
-          numeric
-          centered
-        >
-          {{ props.row.meaning}}
-        </b-table-column>
-        <b-table-column width="10" centered>
-          <span>
-            <b-button tag="router-link" icon-left="pencil-outline" type="is-primary" :to="`card/${props.row.id}/edit`">{{ $t('card.button.edit') }}</b-button>
-          </span>
-          <span>
-            <b-button type="is-danger" icon-left="delete" @click="deleteCard(props.row.id)">{{ $t('card.button.delete') }}</b-button>
-          </span>
-        </b-table-column>
-      </template>
-    </b-table>
-    <br />
-    <b-button tag="router-link" type="is-text" to="/">Back</b-button>
+<div>
+  <div class="columns">
+    <div class="is-offset-2 column is-7">
+      <h1 class="title">
+        Flashcard list
+      </h1>
+    </div>
+    <div class="column">
+      <b-button
+        type="is-info"
+        icon-left="plus"
+        tag="router-link"
+        to='/card/new'
+        >{{ $t('card.button.add') }}</b-button
+      >
+    </div>
   </div>
-  <div class="column is-2"></div>
+  <div class="columns">
+    <div class="is-offset-2 column is-8">
+      <b-table v-if="cardList.length > 0" :data="cardList">
+        <template slot-scope="props">
+          <b-table-column field="ID" width="20" label="id" numeric centered>
+            {{ props.row.id }}
+          </b-table-column>
+          <b-table-column field="word" width="40" label="Word" numeric centered>
+            {{ props.row.word}}
+          </b-table-column>
+          <b-table-column
+            field="meaning"
+            width="40"
+            label="Meaning"
+            numeric
+            centered
+          >
+            {{ props.row.meaning}}
+          </b-table-column>
+          <b-table-column width="10" centered>
+            <span>
+              <b-button
+                tag="router-link"
+                icon-left="pencil-outline"
+                type="is-primary"
+                :to="`card/${props.row.id}/edit`"
+                >{{ $t('card.button.edit') }}</b-button
+              >
+            </span>
+            <span>
+              <b-button
+                type="is-danger"
+                icon-left="delete"
+                @click="deleteCard(props.row.id)"
+                >{{ $t('card.button.delete') }}</b-button
+              >
+            </span>
+          </b-table-column>
+        </template>
+      </b-table>
+      <section v-if="cardList.length == 0" class="section">
+        <div class="content has-text-grey has-text-centered">
+          <p>
+            <b-icon icon="emoticon-sad" size="is-large"> </b-icon>
+          </p>
+          <p>{{ $t('card.table.emptyDeck') }}</p>
+        </div>
+      </section>
+      <br />
+      <b-button tag="router-link" type="is-text" to="/">Back</b-button>
+    </div>
+  </div>
 </div>

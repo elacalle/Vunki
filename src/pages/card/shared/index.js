@@ -39,7 +39,6 @@ export default Vue.extend({
       }
     },
     clearFields () {
-      this.card = { word: null, meaning: null, difficulty: 0, deck: 0 }
       this.$v.$reset()
     },
     back: function () {
@@ -47,7 +46,7 @@ export default Vue.extend({
     },
     success () {
       this.$buefy.toast.open({
-        message: this.$t('card.form.success'),
+        message: this.$t('card.form.success.saved'),
         type: 'is-success'
       })
     }

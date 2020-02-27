@@ -1,13 +1,7 @@
 const Cards = Database.cards
 
 export async function save (obj) {
-  return Cards.put(obj)
-    .then(response => {
-      return response
-    })
-    .catch(ex => {
-      console.log(ex)
-    })
+  return Cards.put(obj).then(response => { return response })
 }
 
 export async function update (id, obj) {

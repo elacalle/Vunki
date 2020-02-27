@@ -7,10 +7,17 @@ export default {
   },
   button: {
     edit: 'Edit',
-    delete: 'Delete'
+    delete: 'Delete',
+    add: 'Add'
   },
   form: {
-    success: 'Flashcard saved sucessfully'
+    success: {
+      saved: 'Flashcard saved sucessfully',
+      deleted: 'Flashcard deleted sucessfully'
+    }
+  },
+  table: {
+    emptyDeck: 'Your flashcard deck is empty, please start training adding one.'
   },
   errors: {
     word: {

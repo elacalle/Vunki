@@ -24,8 +24,7 @@ module.exports = {
     }),
     new webpack.ProvidePlugin({
       Vue: ['vue/dist/vue.esm.js', 'default'],
-      Dexie: ['dexie', 'default'],
-      Database: ['db', 'default']
+      Database: ['db']
     }),
     new CleanWebpackPlugin()
   ],

@@ -18,6 +18,9 @@ export default Vue.extend({
   },
   created () {
     this.loadCard()
-    this.$on('save', card => { this.update(card.id, card) })
+    this.$on('save', card => {
+      this.update(card.id, card)
+      this.$router.push('/card')
+    })
   }
 })

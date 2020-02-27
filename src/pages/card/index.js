@@ -20,12 +20,12 @@ export default Vue.extend({
     },
     success () {
       this.$buefy.toast.open({
-        message: this.$t('card.form.success'),
+        message: this.$t('card.form.success.deleted'),
         type: 'is-success'
       })
     }
   },
-  async created () {
+  created () {
     this.loadCards()
   }
 })
